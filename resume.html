@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Resume - John Doe</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand"><div class="logo">PH</div>ProfileHub</div>
+    <div class="header-actions">
+      <a class="nav-btn" href="dashboard.html">Dashboard</a>
+      <a class="nav-btn" href="biodata.html">Bio-Data</a>
+      <a class="sign-in logout-btn" href="#">Logout</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card card-wide">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div style="display:flex;gap:16px;align-items:center">
+          <div class="profile-initial" id="hdrInitial">JD</div>
+          <div>
+            <h2 id="resName">John Doe</h2>
+            <div class="meta" id="resContact">john.doe@example.com · +1 234 567 8900 · New York, USA</div>
+          </div>
+        </div>
+        <div>
+          <button class="open-edit-btn btn-save" style="cursor:pointer">Edit</button>
+          <a class="nav-btn" href="#" style="background:#2d7038;color:#fff">Download PDF</a>
+        </div>
+      </div>
+
+      <div class="section-title">Career Objective</div>
+      <p class="meta" id="resObjective">Passionate software developer seeking challenging opportunities.</p>
+
+      <div class="section-title">Education</div>
+      <div id="resEducation"></div>
+
+      <div class="section-title">Skills</div>
+      <div id="resSkills" class="tags"></div>
+
+      <div class="section-title" style="margin-top:14px">Projects</div>
+      <div id="resProjects"></div>
+
+      <div class="section-title" style="margin-top:14px">Certifications</div>
+      <div id="resCerts"></div>
+
+      <div class="section-title" style="margin-top:14px">Hobbies & Interests</div>
+      <div id="resHobbies" class="tags"></div>
+
+    </div>
+  </main>
+
+  <!-- include same modal so user can edit from resume page too -->
+  <div id="editModalBackdrop" class="modal-backdrop">
+    <!-- modal content is identical to dashboard one (duplicate) -->
+    <div class="modal" role="dialog" aria-modal="true">
+      <h3>Edit Profile</h3>
+      <form id="profileEditForm">
+        <!-- same form fields as dashboard.html -->
+        <div class="form-grid">
+          <!-- Full set of inputs (same as dashboard) -->
+          <div class="form-row"><label>Full Name</label><input name="fullName" type="text" /></div>
+          <div class="form-row"><label>Initials</label><input name="initials" type="text" /></div>
+          <div class="form-row"><label>Email</label><input name="email" type="email" /></div>
+          <div class="form-row"><label>Phone</label><input name="phone" type="text" /></div>
+          <div class="form-row"><label>Address</label><input name="address" type="text" /></div>
+          <div class="form-row"><label>Date of Birth</label><input name="dob" type="text" /></div>
+          <div class="form-row"><label>Gender</label><input name="gender" type="text" /></div>
+          <div class="form-row"><label>Nationality</label><input name="nationality" type="text" /></div>
+          <div class="form-row"><label>Father's Name</label><input name="father" type="text" /></div>
+          <div class="form-row"><label>Mother's Name</label><input name="mother" type="text" /></div>
+
+          <div class="form-row" style="grid-column:1 / -1"><label>Career Objective</label><textarea name="objective"></textarea></div>
+
+          <div class="form-row"><label>Education 1 - Title</label><input name="edu1_title" type="text" /></div>
+          <div class="form-row"><label>Education 1 - Institution</label><input name="edu1_inst" type="text" /></div>
+          <div class="form-row"><label>Edu1 - Year</label><input name="edu1_year" type="text" /></div>
+          <div class="form-row"><label>Edu1 - GPA</label><input name="edu1_gpa" type="text" /></div>
+
+          <div class="form-row"><label>Education 2 - Title</label><input name="edu2_title" type="text" /></div>
+          <div class="form-row"><label>Education 2 - Institution</label><input name="edu2_inst" type="text" /></div>
+          <div class="form-row"><label>Edu2 - Year</label><input name="edu2_year" type="text" /></div>
+          <div class="form-row"><label>Edu2 - GPA</label><input name="edu2_gpa" type="text" /></div>
+
+          <div class="form-row" style="grid-column:1 / -1"><label>Skills (comma separated)</label><input name="skills" type="text" /></div>
+
+          <div class="form-row" style="grid-column:1 / -1"><label>Projects (one per line — use `Title::Description`)</label><textarea name="projects"></textarea></div>
+
+          <div class="form-row" style="grid-column:1 / -1"><label>Certifications (comma separated)</label><input name="certifications" type="text" /></div>
+
+          <div class="form-row"><label>Hobbies (comma separated)</label><input name="hobbies" type="text" /></div>
+          <div class="form-row"><label>Languages (comma separated)</label><input name="languages" type="text" /></div>
+
+          <div class="form-row" style="grid-column:1 / -1"><label>Resume Link (optional)</label><input name="resumeLink" type="url" /></div>
+
+        </div>
+
+        <div class="modal-actions">
+          <button id="modalCancelBtn" class="btn-cancel">Cancel</button>
+          <button id="modalSaveBtn" class="btn-save">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="globalToast" class="toast">Saved</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

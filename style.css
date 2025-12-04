@@ -1,0 +1,145 @@
+/* style.css - mint theme like screenshots */
+
+:root{
+  --mint-1: #e9fbf4;
+  --mint-2: #e8faf6;
+  --accent: #00b07a;
+  --muted: #66707a;
+  --card-bg: #ffffff;
+  --card-shadow: 0 8px 24px rgba(18,50,40,0.06);
+  --radius: 12px;
+  --max-width: 1150px;
+  --container-pad: 28px;
+  --heading-font: "Poppins", "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:var(--heading-font);background:linear-gradient(180deg,#f0fff9 0%, #eafbf6 60%);color:#07211a}
+a{color:inherit}
+
+/* layout */
+.site-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px var(--container-pad);
+  background:transparent;
+  border-bottom:1px solid rgba(0,0,0,0.04);
+}
+.brand {
+  display:flex;align-items:center;gap:10px;font-weight:700;color:var(--accent);
+}
+.brand .logo {
+  height:36px;width:36px;border-radius:8px;background:linear-gradient(180deg,#02a66b,#00a36a);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;
+  box-shadow:0 6px 18px rgba(0,160,110,0.08)
+}
+.header-actions{display:flex;gap:12px;align-items:center}
+.sign-in{
+  background:var(--accent);color:#fff;padding:8px 14px;border-radius:10px;text-decoration:none;font-weight:600;box-shadow:0 6px 14px rgba(0,176,122,0.12)
+}
+.container{
+  max-width:var(--max-width);
+  margin:28px auto;
+  padding:0 var(--container-pad);
+}
+
+/* hero */
+.hero{
+  background:linear-gradient(180deg, rgba(255,255,255,0.35), rgba(255,255,255,0.25));
+  border-radius:10px;padding:48px 28px 60px; display:block; box-shadow:var(--card-shadow); text-align:center;
+}
+.pill{
+  display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border-radius:999px;background:#fff;border:1px solid rgba(0,0,0,0.04);color:#1f6b54;font-weight:600;box-shadow:0 6px 18px rgba(10,40,30,0.03);margin-bottom:18px;
+}
+.hero h1{
+  margin:12px 0 12px;font-size:56px;line-height:1.02;font-weight:800;color:#06181a
+}
+.hero h1 .accent{color:#0fa078}
+.hero p.lead{max-width:780px;margin:18px auto 24px;color:var(--muted);font-size:18px}
+
+/* Google CTA */
+.google-btn{
+  display:inline-flex;align-items:center;gap:12px;padding:16px 28px;border-radius:10px;background:#fff;color:#0f1720;font-weight:700;box-shadow:0 10px 30px rgba(13,40,30,0.06);border:1px solid rgba(0,0,0,0.03);text-decoration:none;
+}
+.small-note{color:var(--muted);font-size:13px;margin-top:10px}
+
+/* features cards row */
+.features{display:flex;gap:20px;justify-content:center;margin-top:44px;flex-wrap:wrap}
+.feature{
+  width:250px;background:var(--card-bg);padding:18px;border-radius:14px;box-shadow:var(--card-shadow);text-align:left;border:1px solid rgba(0,0,0,0.03)
+}
+.feature-icon{height:46px;width:46px;border-radius:10px;background:#f2fbf6;display:flex;align-items:center;justify-content:center;margin-bottom:8px;color:#0eaa78;font-size:22px}
+.feature h4{margin:6px 0 8px;font-size:16px}
+.feature p{margin:0;color:var(--muted);font-size:14px}
+
+/* page sections for subsequent pages */
+.row{display:flex;gap:20px;flex-wrap:wrap}
+.card-wide{background:var(--card-bg);padding:18px;border-radius:12px;box-shadow:var(--card-shadow);border:1px solid rgba(0,0,0,0.03)}
+.profile-top{display:flex;align-items:center;gap:18px}
+.profile-initial{height:72px;width:72px;border-radius:50%;background:#e6fbf2;color:#007a52;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:28px;border:4px solid #f1fff7}
+.meta{color:var(--muted);font-size:14px}
+.section-title{font-size:18px;color:#0d3c2f;font-weight:700;margin-bottom:8px}
+
+/* resume lists/tags */
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.tag{background:#eefcf5;color:#007a52;padding:7px 10px;border-radius:8px;font-weight:600}
+
+/* biodata rows */
+.biodata-row{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid #f1f7f4}
+.biodata-row .label{width:160px;color:#2a6f43;font-weight:700}
+.biodata-row .value{color:#345a42}
+
+/* small helpers */
+.center{display:flex;justify-content:center;align-items:center}
+.mb-20{margin-bottom:20px}
+
+/* responsiveness */
+@media (max-width:900px){
+  .hero h1{font-size:38px}
+  .features{justify-content:space-between}
+  .feature{width:48%}
+}
+@media (max-width:600px){
+  .feature{width:100%}
+  .hero h1{font-size:28px}
+}
+/* ========== Modal & form styles (append to style.css) ========== */
+.modal-backdrop{
+  position:fixed;left:0;top:0;width:100%;height:100%;
+  background:rgba(5,20,15,0.35);display:none;align-items:center;justify-content:center;z-index:1200;
+}
+.modal {
+  width:92%;max-width:980px;background:#fff;border-radius:10px;padding:18px;box-shadow:0 12px 40px rgba(0,0,0,0.25);
+  color:#063a2f;
+}
+.modal h3{margin-top:0}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form-row{margin-bottom:8px}
+.form-row label{display:block;font-weight:600;color:#0d3c2f;margin-bottom:6px}
+.form-row input[type="text"], .form-row input[type="email"], .form-row input[type="url"], .form-row textarea, .form-row select {
+  width:100%;padding:8px;border-radius:6px;border:1px solid #e3f5ec;background:#fbfffc;color:#033826;
+}
+.form-row textarea{min-height:80px;resize:vertical}
+.modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:14px}
+.btn-save{background:#0fa078;color:white;padding:10px 16px;border-radius:8px;text-decoration:none;border:none;font-weight:700}
+.btn-cancel{background:#eef6f1;color:#0d3c2f;padding:10px 16px;border-radius:8px;border:none}
+.small-muted{color:#6b7a73;font-size:13px}
+.toast{
+  position:fixed;right:20px;bottom:24px;background:#0fa078;color:#fff;padding:10px 14px;border-radius:8px;box-shadow:0 6px 18px rgba(0,160,120,0.18);display:none;z-index:1300;
+}
+
+/* small responsive */
+@media (max-width:760px){
+  .form-grid{grid-template-columns:1fr}
+}
+/* Fix: Make edit modal scrollable on small screens */
+.modal {
+  max-height: 90vh;       /* modal never grows beyond screen height */
+  overflow-y: auto;       /* enable scrolling inside modal */
+  padding-bottom: 20px;   /* prevent footer from being cut */
+}
+
+/* keep the backdrop from scrolling */
+.modal-backdrop {
+  overflow: hidden;
+}
