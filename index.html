@@ -22,7 +22,7 @@
   <main class="container">
     <section class="hero">
 
-      <!-- Top pill line -->
+      <!-- Top pill -->
       <div class="pill center">
         <span style="height:10px;width:10px;border-radius:50%;background:#7ee7c6;display:inline-block"></span>
         Welcome to My Personal Website
@@ -30,19 +30,19 @@
 
       <!-- Main heading -->
       <h1>
-         My <span class="accent">Portfolio</span><br>
-        Resume & Bio Data
+        My <span class="accent">Portfolio</span><br>
+        Resume & Bio-Data
       </h1>
 
-      <!-- Subtitle paragraph -->
+      <!-- Subtitle -->
       <p class="lead">
-        This is my personal website where you can explore my resume, bio data, skills,
-        projects, and academic details — all organized in a clean, beautiful layout.
+        Explore my resume, biodata, skills, academic background and projects —
+        all neatly organized in a clean personal website.
       </p>
 
-      <!-- Big button -->
+      <!-- MAIN BUTTON -->
       <div class="center" style="margin-top:20px">
-        <a id="continueGoogleBtn" class="google-btn" href="#">
+        <a id="enterProfileBtn" class="google-btn" href="dashboard.html">
           Enter My Website
         </a>
       </div>
@@ -52,36 +52,36 @@
         Scroll down to explore different sections
       </div>
 
-      <!-- Feature cards (same design, text updated for personal portfolio) -->
+      <!-- Feature cards -->
       <div class="features" style="margin-top:36px">
 
         <div class="feature">
           <div class="feature-icon">📄</div>
           <h4>My Resume</h4>
-          <p>View my complete resume including skills, education, and project work.</p>
+          <p>View my full resume — skills, education, projects and certifications.</p>
         </div>
 
         <div class="feature">
-          <div the="feature-icon">🗂️</div>
-          <h4>My Bio Data</h4>
-          <p>A detailed personal biodata with verified academic and personal information.</p>
+          <div class="feature-icon">🗂️</div>
+          <h4>My Bio-Data</h4>
+          <p>Detailed biodata with complete personal and academic information.</p>
         </div>
 
         <div class="feature">
           <div class="feature-icon">🔗</div>
           <h4>Portfolio Sections</h4>
-          <p>Navigate through resume and biodata pages seamlessly with a clean design.</p>
+          <p>Easily navigate to resume and biodata through a clean dashboard.</p>
         </div>
 
         <div class="feature">
-          <div class="feature-icon">✏️</div>
-          <h4>Editable Details</h4>
-          <p>You can update details anytime using the built-in editor pages.</p>
+          <div class="feature-icon">✨</div>
+          <h4>Professional Look</h4>
+          <p>Designed as a real personal portfolio for interviews & presentations.</p>
         </div>
 
       </div>
 
-      <!-- Footer text under the page -->
+      <!-- Bottom tagline -->
       <div style="margin-top:22px;text-align:center;color:#1f6b54;font-weight:600;">
         My Personal Portfolio & Professional Profile
       </div>
@@ -89,10 +89,16 @@
     </section>
   </main>
 
+  <!-- Toast (unused but kept for design consistency) -->
   <div id="globalToast" class="toast">Saved</div>
 
-  <script src="script.js"></script>
+  <!-- Script (only for navigation effects) -->
+  <script>
+    // This script ONLY handles navigation if needed.
+    document.getElementById("enterProfileBtn").addEventListener("click", function(){
+      window.location.href = "dashboard.html";
+    });
+  </script>
 
 </body>
 </html>
-
