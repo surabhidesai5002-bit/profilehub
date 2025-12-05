@@ -7,8 +7,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header class="site-header">
-    <div class="brand"><div class="logo">PH</div>ProfileHub</div>
+    <div class="brand"><div class="logo">SD</div>ProfileHub</div>
     <div class="header-actions">
       <a class="nav-btn" href="dashboard.html">Dashboard</a>
       <a class="nav-btn" href="resume.html">Resume</a>
@@ -18,16 +19,19 @@
 
   <main class="container">
     <div class="card">
+
+      <!-- TOP SECTION -->
       <div style="text-align:center">
         <div class="profile-initial" id="hdrInitial">SD</div>
-        <h2 id="bioName">Bio-Data</h2>
-        <div class="meta">Surabhi Desai</div>
+        <h2 id="bioName">Surabhi Desai</h2>
+        <div class="meta">Bio-Data</div>
       </div>
 
       <div style="text-align:right;margin-top:12px">
         <button class="open-edit-btn btn-save">Edit</button>
       </div>
 
+      <!-- PERSONAL DETAILS -->
       <div class="card" style="margin-top:18px">
         <div class="section-title">Personal Details</div>
         <div class="biodata-row"><div class="label">Full Name</div><div class="value" id="bioFullName">Surabhi Desai</div></div>
@@ -36,12 +40,14 @@
         <div class="biodata-row"><div class="label">Nationality</div><div class="value" id="bioNationality">Indian</div></div>
       </div>
 
+      <!-- FAMILY -->
       <div class="card" style="margin-top:18px">
         <div class="section-title">Family Details</div>
         <div class="biodata-row"><div class="label">Father's Name</div><div class="value" id="bioFather">Gopal Rao Desai</div></div>
         <div class="biodata-row"><div class="label">Mother's Name</div><div class="value" id="bioMother">Sumitra Desai</div></div>
       </div>
 
+      <!-- CONTACT -->
       <div class="card" style="margin-top:18px">
         <div class="section-title">Contact Information</div>
         <div class="biodata-row"><div class="label">Email</div><div class="value" id="bioEmail">surabhidesai5002@gmail.com</div></div>
@@ -49,42 +55,52 @@
         <div class="biodata-row"><div class="label">Address</div><div class="value" id="bioAddress">Bengaluru, Karnataka, India</div></div>
       </div>
 
+      <!-- LANGUAGES -->
       <div class="card" style="margin-top:18px">
         <div class="section-title">Languages Known</div>
         <div id="bioLanguages" class="tags"></div>
       </div>
 
+      <!-- EDUCATION -->
       <div class="card" style="margin-top:18px">
         <div class="section-title">Educational Qualifications</div>
         <div id="bioEdu"></div>
       </div>
 
+      <!-- SKILLS -->
       <div class="card" style="margin-top:18px">
         <div class="section-title">Professional Skills</div>
         <div id="bioSkills" class="tags"></div>
       </div>
 
+      <!-- HOBBIES -->
       <div class="card" style="margin-top:18px">
         <div class="section-title">Hobbies & Interests</div>
         <div id="bioHobbies" class="tags"></div>
       </div>
 
+      <!-- DECLARATION -->
       <div class="card" style="margin-top:18px;background:#eefaf2">
         <div class="section-title">Declaration</div>
-        <p style="color:#0f4f2f">I hereby declare that the information provided above is true and correct to the best of my knowledge and belief.</p>
-        <div style="text-align:right;margin-top:12px;color:#0f4f2f"><strong id="bioFullNameSign">Surabhi Desai</strong><br>Signature</div>
+        <p style="color:#0f4f2f">
+          I hereby declare that the information provided above is true and correct to the best of my knowledge and belief.
+        </p>
+        <div style="text-align:right;margin-top:12px;color:#0f4f2f">
+          <strong id="bioFullNameSign">Surabhi Desai</strong><br>Signature
+        </div>
       </div>
 
     </div>
   </main>
 
-  <!-- edit modal -->
+  <!-- EDIT MODAL (same as resume & dashboard) -->
   <div id="editModalBackdrop" class="modal-backdrop">
     <div class="modal" role="dialog" aria-modal="true">
       <h3>Edit Profile</h3>
+
       <form id="profileEditForm">
         <div class="form-grid">
-          <!-- same fields as earlier -->
+
           <div class="form-row"><label>Full Name</label><input name="fullName" type="text" /></div>
           <div class="form-row"><label>Initials</label><input name="initials" type="text" /></div>
           <div class="form-row"><label>Email</label><input name="email" type="email" /></div>
@@ -99,25 +115,25 @@
           <div class="form-row" style="grid-column:1 / -1"><label>Career Objective</label><textarea name="objective"></textarea></div>
 
           <div class="form-row"><label>Education 1 - Title</label><input name="edu1_title" type="text" /></div>
-          <div class="form-row"><label>Education 1 - Institution</label><input name="edu1_inst" type="text" /></div>
-          <div class="form-row"><label>Edu1 - Year</label><input name="edu1_year" type="text" /></div>
-          <div class="form-row"><label>Edu1 - GPA</label><input name="edu1_gpa" type="text" /></div>
+          <div class="form-row"><label>Institution</label><input name="edu1_inst" type="text" /></div>
+          <div class="form-row"><label>Year</label><input name="edu1_year" type="text" /></div>
+          <div class="form-row"><label>GPA</label><input name="edu1_gpa" type="text" /></div>
 
           <div class="form-row"><label>Education 2 - Title</label><input name="edu2_title" type="text" /></div>
-          <div class="form-row"><label>Education 2 - Institution</label><input name="edu2_inst" type="text" /></div>
-          <div class="form-row"><label>Edu2 - Year</label><input name="edu2_year" type="text" /></div>
-          <div class="form-row"><label>Edu2 - GPA</label><input name="edu2_gpa" type="text" /></div>
+          <div class="form-row"><label>Institution</label><input name="edu2_inst" type="text" /></div>
+          <div class="form-row"><label>Year</label><input name="edu2_year" type="text" /></div>
+          <div class="form-row"><label>GPA</label><input name="edu2_gpa" type="text" /></div>
 
           <div class="form-row" style="grid-column:1 / -1"><label>Skills (comma separated)</label><input name="skills" type="text" /></div>
 
-          <div class="form-row" style="grid-column:1 / -1"><label>Projects (one per line — use `Title::Description`)</label><textarea name="projects"></textarea></div>
+          <div class="form-row" style="grid-column:1 / -1"><label>Projects</label><textarea name="projects"></textarea></div>
 
-          <div class="form-row" style="grid-column:1 / -1"><label>Certifications (comma separated)</label><input name="certifications" type="text" /></div>
+          <div class="form-row" style="grid-column:1 / -1"><label>Certifications</label><input name="certifications" type="text" /></div>
 
-          <div class="form-row"><label>Hobbies (comma separated)</label><input name="hobbies" type="text" /></div>
-          <div class="form-row"><label>Languages (comma separated)</label><input name="languages" type="text" /></div>
+          <div class="form-row"><label>Hobbies</label><input name="hobbies" type="text" /></div>
+          <div class="form-row"><label>Languages</label><input name="languages" type="text" /></div>
 
-          <div class="form-row" style="grid-column:1 / -1"><label>Resume Link (optional)</label><input name="resumeLink" type="url" /></div>
+          <div class="form-row" style="grid-column:1 / -1"><label>Resume Link</label><input name="resumeLink" type="url" /></div>
 
         </div>
 
@@ -125,6 +141,7 @@
           <button id="modalCancelBtn" class="btn-cancel">Cancel</button>
           <button id="modalSaveBtn" class="btn-save">Save</button>
         </div>
+
       </form>
     </div>
   </div>
