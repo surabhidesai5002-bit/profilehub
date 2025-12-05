@@ -2,208 +2,114 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Dashboard - ProfileHub</title>
+  <title>Dashboard — Surabhi Desai</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- HEADER -->
   <header class="site-header">
-    <div class="brand"><div class="logo">PH</div>ProfileHub</div>
+    <div class="brand">
+      <div class="logo">SD</div>
+      <div>Surabhi Desai</div>
+    </div>
     <div class="header-actions">
       <a class="nav-btn" href="resume.html">Resume</a>
       <a class="nav-btn" href="biodata.html">Bio-Data</a>
-      <a class="sign-in logout-btn" href="#">Logout</a>
     </div>
   </header>
 
+  <!-- MAIN CONTENT -->
   <main class="container">
     <div class="card card-wide">
+
+      <!-- PROFILE TOP -->
       <div class="profile-top">
-        <div class="profile-initial" id="hdrInitial">SD</div>
+        <div class="profile-initial">SD</div>
         <div>
-          <h2 id="dashName">Welcome back, Surabhi Desai!</h2>
-          <div class="meta" id="dashMeta">Manage your profile and share your pages</div>
-        </div>
-        <div style="margin-left:auto">
-          <button class="open-edit-btn btn-save" style="cursor:pointer">Edit Profile</button>
+          <h2>Welcome to My Dashboard</h2>
+          <div class="meta">Explore my Resume & Bio-Data sections</div>
         </div>
       </div>
 
+      <!-- TWO BOXES -->
       <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+
+        <!-- Resume Box -->
         <div style="flex:1;min-width:260px" class="card-wide">
           <div class="section-title">Resume Page</div>
-          <div style="display:flex;gap:8px;align-items:center">
-            <input id="resumeLinkInput" style="flex:1;padding:8px;border-radius:6px;border:1px solid #e9f6ef" value="">
-            <button id="copyResumeLink" class="nav-btn">Copy</button>
+          <p class="meta">View my complete academic and technical profile.</p>
+          <div style="margin-top:8px">
+            <a class="nav-btn" href="resume.html">Open Resume</a>
           </div>
-          <div style="margin-top:8px"><a class="nav-btn" href="resume.html">View Resume</a></div>
         </div>
 
+        <!-- Bio Data Box -->
         <div style="flex:1;min-width:260px" class="card-wide">
           <div class="section-title">Bio-Data Page</div>
-          <input style="width:100%;padding:8px;border-radius:6px;border:1px solid #e9f6ef" value="https://example.com/biodata/surabhidesai" readonly>
-          <div style="margin-top:8px"><a class="nav-btn" href="biodata.html">View Bio-Data</a></div>
+          <p class="meta">View my personal details and background information.</p>
+          <div style="margin-top:8px">
+            <a class="nav-btn" href="biodata.html">Open Bio-Data</a>
+          </div>
         </div>
+
       </div>
 
+      <!-- INFORMATION PREVIEW -->
       <div style="margin-top:18px">
-        <div class="section-title">Profile Information</div>
+        <div class="section-title">Profile Overview</div>
+
         <div style="display:flex;gap:22px;flex-wrap:wrap">
+
+          <!-- Personal Info -->
           <div style="flex:1;min-width:260px" class="card-wide">
             <div class="section-title">Personal Information</div>
             <table>
-              <tr><td><strong>Phone</strong></td><td id="dashPhone">9019408159</td></tr>
-              <tr><td><strong>Date of Birth</strong></td><td id="dashDob">05-12-2005</td></tr>
-              <tr><td><strong>Gender</strong></td><td id="dashGender">Female</td></tr>
-              <tr><td><strong>Nationality</strong></td><td id="dashNationality">Indian</td></tr>
+              <tr><td><strong>Name</strong></td><td>Surabhi Desai</td></tr>
+              <tr><td><strong>Phone</strong></td><td>9019408159</td></tr>
+              <tr><td><strong>Email</strong></td><td>surabhidesai5002@gmail.com</td></tr>
+              <tr><td><strong>Date of Birth</strong></td><td>05-12-2005</td></tr>
+              <tr><td><strong>Gender</strong></td><td>Female</td></tr>
+              <tr><td><strong>Nationality</strong></td><td>Indian</td></tr>
             </table>
           </div>
 
+          <!-- Career Objective, Education, Skills -->
           <div style="flex:1;min-width:260px" class="card-wide">
             <div class="section-title">Career Objective</div>
-            <p class="meta" id="resObjective">Aspiring Computer Science student with strong interest in Machine Learning and Web Development. Seeking opportunities to build impactful solutions and deepen practical skills.</p>
+            <p class="meta">
+              Aspiring Computer Science student with strong interest in Machine Learning and Web Development.
+              Seeking opportunities to build impactful solutions and deepen practical skills.
+            </p>
+
             <div class="section-title" style="margin-top:14px">Education</div>
-            <div id="resEducation"></div>
+            <ul class="meta">
+              <li><strong>B.E CSE</strong> — Sapthagiri College of Engineering (2023-2027) — 9.15 CGPA</li>
+              <li><strong>12th PCMB</strong> — Vidya Soudha PU College (2023) — 95.5%</li>
+            </ul>
+
             <div class="section-title" style="margin-top:12px">Skills</div>
-            <div id="resSkills" class="tags"></div>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">SQL</span>
+              <span class="tag">C/C++</span>
+              <span class="tag">Java</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">NumPy</span>
+              <span class="tag">Matplotlib</span>
+              <span class="tag">PyTorch</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">Git</span>
+            </div>
           </div>
+
         </div>
       </div>
 
     </div>
   </main>
 
-  <!-- EDIT MODAL backdrop -->
-  <div id="editModalBackdrop" class="modal-backdrop">
-    <div class="modal" role="dialog" aria-modal="true">
-      <h3>Edit Profile</h3>
-      <form id="profileEditForm">
-        <div class="form-grid">
-          <div class="form-row">
-            <label>Full Name</label>
-            <input name="fullName" type="text" />
-          </div>
-          <div class="form-row">
-            <label>Initials</label>
-            <input name="initials" type="text" />
-          </div>
-
-          <div class="form-row">
-            <label>Email</label>
-            <input name="email" type="email" />
-          </div>
-          <div class="form-row">
-            <label>Phone</label>
-            <input name="phone" type="text" />
-          </div>
-
-          <div class="form-row">
-            <label>Address</label>
-            <input name="address" type="text" />
-          </div>
-          <div class="form-row">
-            <label>Date of Birth</label>
-            <input name="dob" type="text" />
-          </div>
-
-          <div class="form-row">
-            <label>Gender</label>
-            <input name="gender" type="text" />
-          </div>
-          <div class="form-row">
-            <label>Nationality</label>
-            <input name="nationality" type="text" />
-          </div>
-
-          <div class="form-row">
-            <label>Father's Name</label>
-            <input name="father" type="text" />
-          </div>
-          <div class="form-row">
-            <label>Mother's Name</label>
-            <input name="mother" type="text" />
-          </div>
-
-          <div class="form-row" style="grid-column:1 / -1">
-            <label>Career Objective</label>
-            <textarea name="objective"></textarea>
-          </div>
-
-          <div class="form-row">
-            <label>Education 1 - Title</label>
-            <input name="edu1_title" type="text" />
-          </div>
-          <div class="form-row">
-            <label>Education 1 - Institution</label>
-            <input name="edu1_inst" type="text" />
-          </div>
-          <div class="form-row">
-            <label>Edu1 - Year</label>
-            <input name="edu1_year" type="text" />
-          </div>
-          <div class="form-row">
-            <label>Edu1 - GPA</label>
-            <input name="edu1_gpa" type="text" />
-          </div>
-
-          <div class="form-row">
-            <label>Education 2 - Title</label>
-            <input name="edu2_title" type="text" />
-          </div>
-          <div class="form-row">
-            <label>Education 2 - Institution</label>
-            <input name="edu2_inst" type="text" />
-          </div>
-          <div class="form-row">
-            <label>Edu2 - Year</label>
-            <input name="edu2_year" type="text" />
-          </div>
-          <div class="form-row">
-            <label>Edu2 - GPA</label>
-            <input name="edu2_gpa" type="text" />
-          </div>
-
-          <div class="form-row" style="grid-column:1 / -1">
-            <label>Skills (comma separated)</label>
-            <input name="skills" type="text" />
-          </div>
-
-          <div class="form-row" style="grid-column:1 / -1">
-            <label>Projects (one per line — use `Title::Description`)</label>
-            <textarea name="projects"></textarea>
-          </div>
-
-          <div class="form-row" style="grid-column:1 / -1">
-            <label>Certifications (comma separated)</label>
-            <input name="certifications" type="text" />
-          </div>
-
-          <div class="form-row">
-            <label>Hobbies (comma separated)</label>
-            <input name="hobbies" type="text" />
-          </div>
-          <div class="form-row">
-            <label>Languages (comma separated)</label>
-            <input name="languages" type="text" />
-          </div>
-
-          <div class="form-row" style="grid-column:1 / -1">
-            <label>Resume Link (optional)</label>
-            <input name="resumeLink" type="url" />
-          </div>
-
-        </div>
-
-        <div class="modal-actions">
-          <button id="modalCancelBtn" class="btn-cancel">Cancel</button>
-          <button id="modalSaveBtn" class="btn-save">Save</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <div id="globalToast" class="toast">Saved</div>
-
-  <script src="script.js"></script>
 </body>
 </html>
