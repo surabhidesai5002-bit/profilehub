@@ -8,7 +8,7 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="brand"><div class="logo">PH</div>ProfileHub</div>
+    <div class="brand"><div class="logo">SD</div>ProfileHub</div>
     <div class="header-actions">
       <a class="nav-btn" href="dashboard.html">Dashboard</a>
       <a class="nav-btn" href="biodata.html">Bio-Data</a>
@@ -18,48 +18,64 @@
 
   <main class="container">
     <div class="card card-wide">
+
+      <!-- TOP SECTION -->
       <div style="display:flex;justify-content:space-between;align-items:center">
         <div style="display:flex;gap:16px;align-items:center">
           <div class="profile-initial" id="hdrInitial">SD</div>
           <div>
             <h2 id="resName">Surabhi Desai</h2>
-            <div class="meta" id="resContact">surabhidesai5002@gmail.com · 9019408159 · Bengaluru, Karnataka</div>
+            <div class="meta" id="resContact">
+              surabhidesai5002@gmail.com · 9019408159 · Bengaluru, Karnataka, India
+            </div>
           </div>
         </div>
+
         <div>
           <button class="open-edit-btn btn-save" style="cursor:pointer">Edit</button>
           <a class="nav-btn" href="#" style="background:#2d7038;color:#fff">Download PDF</a>
         </div>
       </div>
 
+      <!-- CAREER OBJECTIVE -->
       <div class="section-title">Career Objective</div>
-      <p class="meta" id="resObjective">Aspiring Computer Science student with strong interest in Machine Learning and Web Development. Seeking opportunities to build impactful solutions and deepen practical skills.</p>
+      <p class="meta" id="resObjective">
+        Aspiring Computer Science student with strong interest in Machine Learning and Web Development.
+        Seeking opportunities to build impactful solutions and deepen practical skills.
+      </p>
 
+      <!-- EDUCATION -->
       <div class="section-title">Education</div>
       <div id="resEducation"></div>
 
+      <!-- SKILLS -->
       <div class="section-title">Skills</div>
       <div id="resSkills" class="tags"></div>
 
+      <!-- PROJECTS -->
       <div class="section-title" style="margin-top:14px">Projects</div>
       <div id="resProjects"></div>
 
+      <!-- CERTIFICATIONS -->
       <div class="section-title" style="margin-top:14px">Certifications</div>
       <div id="resCerts"></div>
 
+      <!-- HOBBIES -->
       <div class="section-title" style="margin-top:14px">Hobbies & Interests</div>
       <div id="resHobbies" class="tags"></div>
 
     </div>
   </main>
 
-  <!-- edit modal (same as other pages) -->
+  <!-- EDIT MODAL -->
   <div id="editModalBackdrop" class="modal-backdrop">
     <div class="modal" role="dialog" aria-modal="true">
       <h3>Edit Profile</h3>
+
       <form id="profileEditForm">
         <div class="form-grid">
-          <!-- same fields as dashboard -->
+
+          <!-- PERSONAL INFO -->
           <div class="form-row"><label>Full Name</label><input name="fullName" type="text" /></div>
           <div class="form-row"><label>Initials</label><input name="initials" type="text" /></div>
           <div class="form-row"><label>Email</label><input name="email" type="email" /></div>
@@ -71,28 +87,53 @@
           <div class="form-row"><label>Father's Name</label><input name="father" type="text" /></div>
           <div class="form-row"><label>Mother's Name</label><input name="mother" type="text" /></div>
 
-          <div class="form-row" style="grid-column:1 / -1"><label>Career Objective</label><textarea name="objective"></textarea></div>
+          <!-- OBJECTIVE -->
+          <div class="form-row" style="grid-column:1 / -1">
+            <label>Career Objective</label>
+            <textarea name="objective"></textarea>
+          </div>
 
+          <!-- EDUCATION 1 -->
           <div class="form-row"><label>Education 1 - Title</label><input name="edu1_title" type="text" /></div>
-          <div class="form-row"><label>Education 1 - Institution</label><input name="edu1_inst" type="text" /></div>
-          <div class="form-row"><label>Edu1 - Year</label><input name="edu1_year" type="text" /></div>
-          <div class="form-row"><label>Edu1 - GPA</label><input name="edu1_gpa" type="text" /></div>
+          <div class="form-row"><label>Institution</label><input name="edu1_inst" type="text" /></div>
+          <div class="form-row"><label>Year</label><input name="edu1_year" type="text" /></div>
+          <div class="form-row"><label>GPA</label><input name="edu1_gpa" type="text" /></div>
 
+          <!-- EDUCATION 2 -->
           <div class="form-row"><label>Education 2 - Title</label><input name="edu2_title" type="text" /></div>
-          <div class="form-row"><label>Education 2 - Institution</label><input name="edu2_inst" type="text" /></div>
-          <div class="form-row"><label>Edu2 - Year</label><input name="edu2_year" type="text" /></div>
-          <div class="form-row"><label>Edu2 - GPA</label><input name="edu2_gpa" type="text" /></div>
+          <div class="form-row"><label>Institution</label><input name="edu2_inst" type="text" /></div>
+          <div class="form-row"><label>Year</label><input name="edu2_year" type="text" /></div>
+          <div class="form-row"><label>GPA</label><input name="edu2_gpa" type="text" /></div>
 
-          <div class="form-row" style="grid-column:1 / -1"><label>Skills (comma separated)</label><input name="skills" type="text" /></div>
+          <!-- SKILLS -->
+          <div class="form-row" style="grid-column:1 / -1">
+            <label>Skills (comma separated)</label>
+            <input name="skills" type="text" />
+          </div>
 
-          <div class="form-row" style="grid-column:1 / -1"><label>Projects (one per line — use `Title::Description`)</label><textarea name="projects"></textarea></div>
+          <!-- PROJECTS -->
+          <div class="form-row" style="grid-column:1 / -1">
+            <label>Projects (one per line — Title::Description)</label>
+            <textarea name="projects"></textarea>
+          </div>
 
-          <div class="form-row" style="grid-column:1 / -1"><label>Certifications (comma separated)</label><input name="certifications" type="text" /></div>
+          <!-- CERTIFICATIONS -->
+          <div class="form-row" style="grid-column:1 / -1">
+            <label>Certifications (comma separated)</label>
+            <input name="certifications" type="text" />
+          </div>
 
+          <!-- HOBBIES -->
           <div class="form-row"><label>Hobbies (comma separated)</label><input name="hobbies" type="text" /></div>
+
+          <!-- LANGUAGES -->
           <div class="form-row"><label>Languages (comma separated)</label><input name="languages" type="text" /></div>
 
-          <div class="form-row" style="grid-column:1 / -1"><label>Resume Link (optional)</label><input name="resumeLink" type="url" /></div>
+          <!-- RESUME LINK -->
+          <div class="form-row" style="grid-column:1 / -1">
+            <label>Resume Link (optional)</label>
+            <input name="resumeLink" type="url" />
+          </div>
 
         </div>
 
@@ -100,6 +141,7 @@
           <button id="modalCancelBtn" class="btn-cancel">Cancel</button>
           <button id="modalSaveBtn" class="btn-save">Save</button>
         </div>
+
       </form>
     </div>
   </div>
